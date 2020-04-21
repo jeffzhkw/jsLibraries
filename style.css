@@ -1,0 +1,74 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    padding: 0pt;
+    margin: 0pt;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.result{
+    overflow: hidden;
+    /* position: fixed; Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    height: 10vh;
+    margin: 0.3vh;
+}
+.panel{
+    display: flex;
+    overflow: hidden;
+    height: 80vh;
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+    justify-content: space-around;
+}
+
+.red, .green, .blue{
+    overflow: auto;
+    height: auto;
+    padding: .5rem;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+}
+
+.red {
+    width: 33vw;
+    height: 100vh;
+    background-color:black;
+}
+
+.green {
+    width: 33vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.blue {
+    width: 33vw;
+    height: 100vh;
+    background-color: black;
+}
+
+.dialPanel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 2550px;
+    width: 100%;
+}
+
+.rellax{
+    height: 200px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    color: white;
+}

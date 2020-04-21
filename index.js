@@ -3,13 +3,16 @@ var greenElem = document.getElementsByClassName("green")[0]
 var blueElem = document.getElementsByClassName("blue")[0]
 var result = document.getElementsByClassName("result")[0]
 
-var lazyLoad = document.getElementsByClassName("lozad")[0]
 
-//var rellax = new Rellax('.rellax');
+var rellax = new Rellax('.rellax');
 
-const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+const el = document.querySelector('img');
+const observer = lozad('.lozad', {
+    loaded: function(el) {
+        el.classList.add('fade');
+    }
+}) 
 observer.observe();
-
 
 redElem.addEventListener("scroll", function () {
     r = calcRGB(redElem.scrollTop)
@@ -49,7 +52,7 @@ function setStyle(r,g,b){
     greenElem.style.backgroundColor = rgb(0,g,0)
     blueElem.style.backgroundColor = rgb(0,0,b)
     result.style.backgroundColor = rgb(r,g,b)
-    lazyLoad.innerHTML = rgb(r,g,b)
+    result.innerHTML = rgb(r,g,b)
     
 }
 

@@ -1,30 +1,63 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     padding: 0pt;
     margin: 0pt;
+    background-color: #F9F4E7;
 }
 
-.main{
+.frontPage {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.frontPage img {
+    width: 50px;
+    height: 100px;
+}
+
+h1 {
+    font-size: 100pt;
+    margin: 40px;
+}
+
+h2 {
+    font-style: italic;
+}
+
+.main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.result{
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: cetner;
     overflow: hidden;
+    background-color: black;
     /* position: fixed; Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    top: 0;
+    /* Position the navbar at the top of the page */
+    width: 100%;
+    /* Full width */
     height: 10vh;
     margin: 0.3vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.panel{
+
+.panel {
     display: flex;
     overflow: hidden;
-    height: 80vh;
+    height: 90vh;
     position: relative;
     width: 100%;
     backface-visibility: hidden;
@@ -32,7 +65,21 @@ html, body{
     justify-content: space-around;
 }
 
-.red, .green, .blue{
+.panel > div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
+
+.panel div img{
+    width: 50px;
+    height: 100px;
+}
+
+.red,
+.green,
+.blue {
     overflow: auto;
     height: auto;
     padding: .5rem;
@@ -43,7 +90,7 @@ html, body{
 .red {
     width: 33vw;
     height: 100vh;
-    background-color:black;
+    background-color: black;
 }
 
 .green {
@@ -58,7 +105,8 @@ html, body{
     background-color: black;
 }
 
-.dialPanel{
+.dialPanel {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,9 +114,23 @@ html, body{
     width: 100%;
 }
 
-.rellax{
+.rellax {
     height: 200px;
     padding-top: 20px;
     padding-bottom: 25px;
     color: white;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+  
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
 }
